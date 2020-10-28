@@ -23,4 +23,8 @@ public class ClientService {
 		Optional<Client> obj = repository.findById(id);
 		return obj.get();
 	}
+	
+	public List<Client> findByName(String name) {
+		return repository.findByNameIgnoreCase(name);
+	}
 }

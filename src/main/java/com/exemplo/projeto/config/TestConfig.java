@@ -30,11 +30,13 @@ public class TestConfig implements CommandLineRunner {
 		
 		Client c1 = new Client(null, "Maria Brown", "98527488");
 		Client c2 = new Client(null, "Bob Green", "99856325");
+		Client c3 = new Client(null, "Mary Green", "99856334");
 		
 		ServiceType st1 = new ServiceType(null, "Faxina na casa", 80.00, sdf.parse("30/10/2020 08:00"), c1);
 		ServiceType st2 = new ServiceType(null, "Pintar a casa", 350.00, sdf.parse("30/10/2020 10:30"), c2);
+		ServiceType st3 = new ServiceType(null, "Limpar a piscina", 50.00, sdf.parse("30/10/2020 11:30"), c3);
 		
-		clientRepository.saveAll(Arrays.asList(c1, c2));
-		serviceTypeRepository.saveAll(Arrays.asList(st1, st2));
+		clientRepository.saveAll(Arrays.asList(c1, c2, c3));
+		serviceTypeRepository.saveAll(Arrays.asList(st1, st2, st3));
 	}
 }
